@@ -11,9 +11,7 @@ export default function Layout(){
     return(
         <main>
             <Nav resources={resources}/>
-            <section id="contentSection">
-                
-            </section>
+            <CategoryCard resources={resources}/>
         </main>
     )
 }

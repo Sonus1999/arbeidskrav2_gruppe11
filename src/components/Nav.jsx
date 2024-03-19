@@ -1,6 +1,13 @@
+import { useState, useEffect } from "react";
 import { resources } from "../assets/ressurser";
+import { Link } from "react-router-dom";
 export default function Nav(){
 
+    const [active, setActive] = useState()
+
+    useEffect(()=>{
+        console.log(active)
+    }, [active])
     
 
     function getUniqueCategories(resources) {
@@ -19,7 +26,9 @@ export default function Nav(){
             <ul>
                 {uniqueCategories.map((category) => (
                     <li key={category}>
-                        <button className="page">{category}</button>
+                        <Link to={"/produkter/"+category.replaceAll(" ", "-")} className={active === category ? "active" : null}
+                            onClick={()=> setActive(category)}
+                        >{category}</Link>
                     </li>
                 ))}
             </ul>

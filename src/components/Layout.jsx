@@ -1,6 +1,19 @@
+import CategoryCard from "./CategoryCard"
+import Nav from "./Nav"
+
+import {resources} from '../assets/ressurser'
+
 export default function Layout(){
 
+    
+
+
     return(
-        <h1>Test</h1>
+        <main>
+            <Nav resources={resources}/>
+            <section id="contentSection">
+                
+            </section>
+        </main>
     )
 }

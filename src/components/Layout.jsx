@@ -9,7 +9,7 @@ export default function Layout({resources}){
     const [active, setActive] = useState()
 
     useEffect(()=>{
-        console.log(active)
+        
     }, [active])
 
     // Her er det mulig jeg overkompliserte oppgaven, men jeg valgte å sette kategoriene dynamisk etter hva som finnes i ressurser.js
@@ -22,7 +22,7 @@ export default function Layout({resources}){
     }
     
     const uniqueCategories = getUniqueCategories(resources);
-    console.log(uniqueCategories);
+    
 
 
     return(

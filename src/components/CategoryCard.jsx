@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 export default function CategoryCard({resources}){
     const {pathname} = useLocation()
     const url = pathname.split("/")[1]
-    console.log(url)
+    
     
     const activeResources = resources.filter(resources => resources.category === url);
 

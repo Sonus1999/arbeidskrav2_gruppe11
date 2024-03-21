@@ -7,22 +7,19 @@ export default function CategoryCard({resources}){
     const url = pathname.split("/")[1]
     console.log(url)
     
-    
-
-
-    
-    function showCategory() {
-        const activeResources = resources.filter(resources => resources.category === url);
-
-        console.log(activeResources);
-    }
-
-    showCategory()
+    const activeResources = resources.filter(resources => resources.category === url);
 
     return(
         <section id="contentSection">
                 <h2>{url}</h2>
-                
+                <ul>
+                    {activeResources?.map((item, index) =>  
+                    <li key={index}> 
+                        <a href={item.url} target="_blank">
+                            {item.title}
+                        </a>
+                    </li>)}
+                </ul>
             </section>
     )
 }

@@ -3,6 +3,7 @@ import './App.css'
 import Layout from './components/Layout'
 import CategoryCard from './components/CategoryCard'
 import { resources } from './assets/ressurser'
+import './styles/main.scss'
 
 
 

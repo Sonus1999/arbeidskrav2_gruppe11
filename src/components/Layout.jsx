@@ -12,6 +12,7 @@ export default function Layout({resources}){
         console.log(active)
     }, [active])
 
+    // Her er det mulig jeg overkompliserte oppgaven, men jeg valgte å sette kategoriene dynamisk etter hva som finnes i ressurser.js
     function getUniqueCategories(resources) {
         const uniqueCategories = new Set();
         resources.forEach((resource) => {
@@ -31,7 +32,7 @@ export default function Layout({resources}){
             <ul>
                 {uniqueCategories.map((category) => (
                     <li key={category}>
-                        <Link to={"/produkter/"+category.replaceAll(" ", "-")} className={active === category ? "active" : null}
+                        <Link to={"/"+category.replaceAll(" ", "-")} className={active === category ? "active" : null}
                             onClick={()=> setActive(category)}
                         >{category}</Link>
                     </li>

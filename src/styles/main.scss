@@ -11,25 +11,27 @@ body {
     font-family: $font;
 }
 
-nav ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0;
-}
+nav {
+    ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
 
-nav a {
-    display: inline-block;
-    padding: 1rem 3rem;
-    color: $white;
-    background-color: $darkblue;
-    font-weight: 600;  
-}
+    a {
+        display: inline-block;
+        padding: 1rem 3rem;
+        color: $white;
+        background-color: $darkblue;
+        font-weight: 600;  
 
-nav a.active {
-    background-color: $white;
-    color: $darkblue;
+        &.active {
+            background-color: $white;
+            color: $darkblue;
+        }
+    }
 }
 
 section {
@@ -38,8 +40,9 @@ section {
     height: 250px;
     width: 850px;
     text-align: left; 
+
+    a {
+        text-decoration: underline;
+    }
 }
 
-section a {
-    text-decoration: underline;
-}

@@ -18,6 +18,11 @@ nav {
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;
+
+        @media (max-width: 1050px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     a {
@@ -25,11 +30,16 @@ nav {
         padding: 1rem 3rem;
         color: $white;
         background-color: $darkblue;
-        font-weight: 600;  
+        font-weight: 600;   
 
         &.active {
             background-color: $white;
             color: $darkblue;
+        }
+
+        @media (max-width: 1050px) {
+            margin-bottom: 10px;
+            border-radius: 10px;
         }
     }
 }
@@ -44,5 +54,10 @@ section {
     a {
         text-decoration: underline;
     }
-}
 
+    @media (max-width: 1050px) {
+        width: 100%;
+        box-sizing: border-box;
+        height: 350px;
+    }
+}

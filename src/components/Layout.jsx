@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Layout({resources}){
 
-    const [active, setActive] = useState()
+    const [active, setActive] = useState("html")
 
     useEffect(()=>{
         
